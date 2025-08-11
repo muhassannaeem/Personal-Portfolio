@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "title": "E-commerce Platform",
+    "description": "A full-stack e-commerce application built with Next.js, Express, and MongoDB, featuring user authentication, product listings, and a shopping cart.",
+    "image": "/placeholder.svg?height=400&width=600",
+    "githubUrl": "https://github.com/yourusername/ecommerce-platform",
+    "deployedUrl": "https://ecommerce.vercel.app"
+  },
+  {
+    "id": "2",
+    "title": "Mobile Chat App",
+    "description": "A real-time chat application developed using React Native and Firebase, supporting text messages, image sharing, and user presence.",
+    "image": "/placeholder.svg?height=400&width=600",
+    "githubUrl": "https://github.com/yourusername/mobile-chat-app",
+    "deployedUrl": "https://expo.dev/@yourusername/chat-app"
+  },
+  {
+    "id": "3",
+    "title": "Portfolio Website V2",
+    "description": "My personal portfolio website, showcasing my projects and skills, built with Next.js and Tailwind CSS, designed for a modern and responsive experience.",
+    "image": "/placeholder.svg?height=400&width=600",
+    "githubUrl": "https://github.com/yourusername/portfolio-v2",
+    "deployedUrl": "https://yourportfolio.vercel.app"
+  },
+  {
+    "id": "4",
+    "title": "Design System Library",
+    "description": "A reusable UI component library for consistent design across multiple projects, built with Storybook and styled with Tailwind CSS.",
+    "image": "/placeholder.svg?height=400&width=600",
+    "githubUrl": "https://github.com/yourusername/design-system",
+    "deployedUrl": "https://design-system.vercel.app"
+  },
+  {
+    "id": "5",
+    "title": "Task Management API",
+    "description": "A RESTful API for task management, developed with Node.js, Express.js, and MySQL, including user authentication and CRUD operations.",
+    "image": "/placeholder.svg?height=400&width=600",
+    "githubUrl": "https://github.com/yourusername/task-api",
+    "deployedUrl": "https://task-api.vercel.app"
+  },
+  {
+    "id": "6",
+    "title": "AI-Powered Content Generator",
+    "description": "A web application leveraging AI models to generate creative content, built with Next.js and integrated with various AI APIs.",
+    "image": "/placeholder.svg?height=400&width=600",
+    "githubUrl": "https://github.com/yourusername/ai-content-generator",
+    "deployedUrl": "https://ai-content.vercel.app"
+  }
+]
