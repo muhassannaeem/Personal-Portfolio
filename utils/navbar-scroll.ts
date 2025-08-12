@@ -3,6 +3,8 @@
  * Optional utility functions for smoother navbar transitions
  */
 
+import { useState, useEffect } from 'react';
+
 interface ScrollState {
   isScrolled: boolean;
   scrollY: number;
@@ -89,13 +91,13 @@ export class NavbarScrollHandler {
  * const { isScrolled, scrollY, direction } = useNavbarScroll(40);
  */
 export function useNavbarScroll(threshold: number = 40) {
-  const [state, setState] = React.useState<ScrollState>({
+  const [state, setState] = useState<ScrollState>({
     isScrolled: false,
     scrollY: 0,
     direction: null
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handler = new NavbarScrollHandler(threshold);
     
     const unsubscribe = handler.subscribe(setState);

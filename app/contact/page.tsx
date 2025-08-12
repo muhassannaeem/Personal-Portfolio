@@ -1,3 +1,5 @@
+"use client"
+
 import { DotBackground } from "@/components/dot-background";
 import { ContactForm } from "@/components/contact-form";
 import { motion } from "framer-motion";

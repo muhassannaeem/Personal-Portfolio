@@ -1,3 +1,5 @@
+"use client"
+
 import { DotBackground } from "@/components/dot-background";
 import { ServiceCard } from "@/components/service-card";
 import { Code, Smartphone, Palette } from "lucide-react";
