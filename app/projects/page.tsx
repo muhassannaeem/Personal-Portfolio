@@ -1,29 +1,27 @@
-"use client"
-
-import { DotBackground } from "@/components/dot-background"
-import { ProjectCard } from "@/components/project-card"
-import fs from "fs/promises"
-import path from "path"
-import { motion } from "framer-motion"
+import { DotBackground } from "@/components/dot-background";
+import { ProjectCard } from "@/components/project-card";
+import fs from "fs/promises";
+import path from "path";
+import { motion } from "framer-motion";
 
 interface Project {
-  id: string
-  title: string
-  description: string
-  image: string
-  githubUrl: string
-  deployedUrl: string
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  githubUrl: string;
+  deployedUrl: string;
 }
 
 async function getProjects(): Promise<Project[]> {
-  const filePath = path.join(process.cwd(), "data", "projects.json")
-  const jsonData = await fs.readFile(filePath, "utf-8")
-  const projects: Project[] = JSON.parse(jsonData)
-  return projects
+  const filePath = path.join(process.cwd(), "data", "projects.json");
+  const jsonData = await fs.readFile(filePath, "utf-8");
+  const projects: Project[] = JSON.parse(jsonData);
+  return projects;
 }
 
 export default async function ProjectsPage() {
-  const projects = await getProjects()
+  const projects = await getProjects();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -33,12 +31,12 @@ export default async function ProjectsPage() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  }
+  };
 
   return (
     <DotBackground className="min-h-[calc(100vh-3.5rem)] flex flex-col">
@@ -59,9 +57,10 @@ export default async function ProjectsPage() {
             animate="visible"
             transition={{ delay: 0.2 }}
           >
-            Explore a selection of my recent work, showcasing my skills in web development, mobile applications, and
-            UI/UX design. Each project represents a unique challenge and a commitment to delivering high-quality
-            solutions.
+            Explore a selection of my recent work, showcasing my skills in web
+            development, mobile applications, and UI/UX design. Each project
+            represents a unique challenge and a commitment to delivering
+            high-quality solutions.
           </motion.p>
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
@@ -76,5 +75,5 @@ export default async function ProjectsPage() {
         </section>
       </main>
     </DotBackground>
-  )
+  );
 }

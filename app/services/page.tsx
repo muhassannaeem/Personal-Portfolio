@@ -1,9 +1,7 @@
-"use client"
-
-import { DotBackground } from "@/components/dot-background"
-import { ServiceCard } from "@/components/service-card"
-import { Code, Smartphone, Palette } from "lucide-react"
-import { motion } from "framer-motion"
+import { DotBackground } from "@/components/dot-background";
+import { ServiceCard } from "@/components/service-card";
+import { Code, Smartphone, Palette } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function ServicesPage() {
   const services = [
@@ -25,7 +23,7 @@ export default function ServicesPage() {
         "Designing user-centric interfaces and experiences that are not only visually appealing but also highly functional and easy to navigate. My process involves user research, wireframing, prototyping, and iterative design to ensure optimal usability.",
       icon: Palette,
     },
-  ]
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -35,12 +33,12 @@ export default function ServicesPage() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  }
+  };
 
   return (
     <DotBackground className="min-h-[calc(100vh-3.5rem)] flex flex-col">
@@ -61,8 +59,9 @@ export default function ServicesPage() {
             animate="visible"
             transition={{ delay: 0.2 }}
           >
-            I offer a comprehensive range of services to bring your digital ideas to life, focusing on innovation,
-            performance, and user satisfaction.
+            I offer a comprehensive range of services to bring your digital
+            ideas to life, focusing on innovation, performance, and user
+            satisfaction.
           </motion.p>
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
@@ -87,15 +86,19 @@ export default function ServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.7 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Me?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Why Choose Me?
+            </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              With a blend of technical expertise and a keen eye for design, I deliver solutions that are not only
-              robust and scalable but also delightful to use. I prioritize clear communication, agile methodologies, and
-              a commitment to exceeding client expectations. Let's build something amazing together!
+              With a blend of technical expertise and a keen eye for design, I
+              deliver solutions that are not only robust and scalable but also
+              delightful to use. I prioritize clear communication, agile
+              methodologies, and a commitment to exceeding client expectations.
+              Let's build something amazing together!
             </p>
           </motion.div>
         </section>
       </main>
     </DotBackground>
-  )
+  );
 }

@@ -1,20 +1,22 @@
-"use client"
-
-import { DotBackground } from "@/components/dot-background"
-import { ContactForm } from "@/components/contact-form"
-import { motion } from "framer-motion"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { DotBackground } from "@/components/dot-background";
+import { ContactForm } from "@/components/contact-form";
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function ContactPage() {
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  }
+  };
 
   const infoItemVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
-  }
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
 
   return (
     <DotBackground className="min-h-[calc(100vh-3.5rem)] flex flex-col">
@@ -34,8 +36,9 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Have a project in mind, a question, or just want to say hello? I'd love to hear from you! Fill out the form
-            below or reach out directly.
+            Have a project in mind, a question, or just want to say hello? I'd
+            love to hear from you! Fill out the form below or reach out
+            directly.
           </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
@@ -45,7 +48,10 @@ export default function ContactPage() {
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.4 }}
-              whileHover={{ scale: 1.03, boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.1)" }}
+              whileHover={{
+                scale: 1.03,
+                boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.1)",
+              }}
             >
               <Mail className="h-10 w-10 text-primary mb-4" />
               <h3 className="text-xl font-semibold mb-2">Email Me</h3>
@@ -57,7 +63,10 @@ export default function ContactPage() {
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.6 }}
-              whileHover={{ scale: 1.03, boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.1)" }}
+              whileHover={{
+                scale: 1.03,
+                boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.1)",
+              }}
             >
               <Phone className="h-10 w-10 text-primary mb-4" />
               <h3 className="text-xl font-semibold mb-2">Call Me</h3>
@@ -69,7 +78,10 @@ export default function ContactPage() {
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.8 }}
-              whileHover={{ scale: 1.03, boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.1)" }}
+              whileHover={{
+                scale: 1.03,
+                boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.1)",
+              }}
             >
               <MapPin className="h-10 w-10 text-primary mb-4" />
               <h3 className="text-xl font-semibold mb-2">Location</h3>
@@ -81,5 +93,5 @@ export default function ContactPage() {
         </section>
       </main>
     </DotBackground>
-  )
+  );
 }

@@ -123,4 +123,31 @@
     @apply bg-background text-foreground;
     scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
   }
+  
+  /* Fixed navbar spacing adjustments */
+  main {
+    scroll-margin-top: 4rem; /* Account for fixed navbar height */
+  }
+  
+  /* Ensure sections have proper spacing when linked to */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+  
+  /* Custom scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/60 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/80;
+  }
 }
