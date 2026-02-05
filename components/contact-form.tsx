@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { Button } from "@/components/ui/button"
+import { GlowButton } from "@/components/glow-button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
@@ -52,9 +52,9 @@ export function ContactForm() {
         <Textarea id="message" placeholder="Your message..." rows={5} required />
       </motion.div>
       <motion.div variants={itemVariants}>
-        <Button type="submit" className="w-full">
+        <GlowButton type="submit" className="w-full">
           Send Message
-        </Button>
+        </GlowButton>
       </motion.div>
     </motion.form>
   )

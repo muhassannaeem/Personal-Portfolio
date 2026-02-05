@@ -1,0 +1,54 @@
+/* Button Hover Glow Effect */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 0px rgba(53, 152, 190, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(53, 152, 190, 0.6);
+  }
+}
+
+/* Default button glow */
+.btn-glow-default {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.btn-glow-default:hover {
+  box-shadow: 0 0 20px rgba(53, 152, 190, 0.6), 
+              0 4px 15px rgba(53, 152, 190, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-glow-default:active {
+  transform: translateY(0);
+}
+
+/* Outline button glow */
+.btn-glow-outline {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.btn-glow-outline:hover {
+  box-shadow: inset 0 0 15px rgba(53, 152, 190, 0.2),
+              0 0 20px rgba(53, 152, 190, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-glow-outline:active {
+  transform: translateY(0);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .btn-glow-default:hover,
+.dark .btn-glow-default:hover {
+  box-shadow: 0 0 20px rgba(53, 152, 190, 0.7),
+              0 4px 15px rgba(53, 152, 190, 0.4);
+}
+
+[data-theme="dark"] .btn-glow-outline:hover,
+.dark .btn-glow-outline:hover {
+  box-shadow: inset 0 0 15px rgba(53, 152, 190, 0.3),
+              0 0 20px rgba(53, 152, 190, 0.5);
+}

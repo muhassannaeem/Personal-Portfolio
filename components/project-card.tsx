@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Github, LinkIcon } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { GlowButton } from "@/components/glow-button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 interface Project {
@@ -46,16 +46,16 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <div className="flex gap-2 mt-auto">
             {project.githubUrl && (
               <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="sm">
+                <GlowButton variant="outline" size="sm">
                   <Github className="h-4 w-4 mr-2" /> GitHub
-                </Button>
+                </GlowButton>
               </Link>
             )}
             {project.deployedUrl && (
               <Link href={project.deployedUrl} target="_blank" rel="noopener noreferrer">
-                <Button size="sm">
+                <GlowButton size="sm">
                   <LinkIcon className="h-4 w-4 mr-2" /> Live Demo
-                </Button>
+                </GlowButton>
               </Link>
             )}
           </div>

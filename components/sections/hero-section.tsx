@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { GlowButton } from "@/components/glow-button"
 import Image from "next/image"
 
 export function HeroSection() {
@@ -52,14 +52,14 @@ export function HeroSection() {
             variants={itemVariants}
           >
             <Link href="#projects">
-              <Button size="lg" className="w-full sm:w-auto">
+              <GlowButton size="lg" className="w-full sm:w-auto">
                 View Projects
-              </Button>
+              </GlowButton>
             </Link>
             <Link href="#contact">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent">
+              <GlowButton size="lg" variant="outline" className="w-full sm:w-auto bg-transparent">
                 Get in Touch
-              </Button>
+              </GlowButton>
             </Link>
           </motion.div>
         </div>
